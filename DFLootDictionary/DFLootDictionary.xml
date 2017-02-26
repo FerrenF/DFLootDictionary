@@ -1,0 +1,33 @@
+<Ui>
+	<Frame name="DFLootDictionaryFrame" virtual="true">
+	<Anchors>
+		<Anchor point="TOPLEFT">
+		</Anchor>
+	</Anchors>
+	<Layers>
+		<Layer name="OVERLAY">
+			<FontString name="$parent_NameBarText" inherits="GameFontNormal" text="">
+				<Anchors>
+					<Anchor point="TOPLEFT"/>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</FontString>
+		</Layer>
+	</Layers>	
+</Frame>
+
+	<Frame name="DFLootDictionaryFrames">
+		<Scripts>
+			<OnLoad>
+				DFLootDictionary.OnLoad();
+			</OnLoad>
+		</Scripts>
+		<Frames>		
+		</Frames>
+	</Frame>	
+	
+</Ui>
