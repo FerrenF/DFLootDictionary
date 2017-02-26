@@ -13,11 +13,17 @@ WHAT IT DOES:
 PLANNED or IN PROGRESS:
 	- Retrieval of drop information such as Mob Name, Location, and drop chance.
 	- Retrieval of creature information, such as average health, location, type, sample of loot table.
+	- Spell Information
 	- Auctioneer price lookup integration.
+	
 	
 WHAT IT DOESN'T DO:
 	- Make item links that aren't queryable on the server yet (Haven't dropped or do not exist in the current patch.) queryable.
 	- Make you better at the game.
+	
+COMMANDS:
+	/dfloot
+	/dfloot <option> <value>
 
 Questions can be sent to Ferren#6205 on Discord, or messaged to me here. 
 I plan to release more of my private addons in the future depending on how this goes.
