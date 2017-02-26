@@ -24,6 +24,15 @@ WHAT IT DOESN'T DO:
 COMMANDS:
 	/dfloot
 	/dfloot <option> <value>
-
+		Options:
+			"triggerLink" = Trigger for link queries. DEFAULT: "?"
+			"triggerInfo" =	Disabled. In progress.
+			"maxLinks" = Max links to display.		
+			"maxPeek" = Max item names to display after reaching max links.
+			"enableDictionary" = enable/disable all queries. 1 = ON : 0 = OFF
+			"dfUseWhisper" = Respond to queries in whisper.  1 = ON : 0 = OFF
+			"dfUseGuild" = 	Respond to queries in guild chat. 1 = ON : 0 = OFF
+			"dfUseParty" = Respond to queries in party chat.  1 = ON : 0 = OFF
+			
 Questions can be sent to Ferren#6205 on Discord, or messaged to me here. 
 I plan to release more of my private addons in the future depending on how this goes.

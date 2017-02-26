@@ -1,12 +1,12 @@
 DFLootDictionary.Command = {
-	["triggerLink"] = 	{["name"] = "triggerLink", 	["text"] = "lookup trigger", 	["help"]="", callback=function(val) val = string.format("%s",val) setCommandVar( "triggerLink",val) end,	["default"]="?" 	,	["args"]="1"},
-	["triggerInfo"] =	{["name"] = "triggerInfo", 	["text"] = "info(Coming Soon)", 		["help"]="", callback=function(val) val = string.format("%s",val) setCommandVar( "triggerInfo" ,val) end	,["default"]="%" 	,	["args"]="1"},
-	["maxLinks"] = 		{["name"] = "maxLinks",		["text"] = "max links displayed", 	["help"]="", callback=function(val) val = string.format("%i",val) setCommandVar( "maxLinks",val) end,	["default"]=6		,  ["args"]="1"},
-	["maxPeek"] = 		{["name"] = "maxPeek"	,	["text"] = "max peek displayed", 	["help"]="", callback=function(val) val = string.format("%i",val) setCommandVar( "maxPeek",val) end,	["default"]=3			,	["args"]="1"},
-	["enableDictionary"] = 		{["name"] = "enableDictionary",		["text"] = "enable", 	["help"]="", callback=function(val) val = string.format("%i",val) setCommandVar( "enable",val) end,	["default"]	=1 			,	["args"]="1"},
-	["dfUseWhisper"] = 	{["name"] = "dfUseWhisper", ["text"] = "use whisper", 	["help"]="", callback=function(val) val = string.format("%i",val) setCommandVar( "dfUseWhisper",val) end,	["default"]			=1 	,	["args"]="1"},
-	["dfUseGuild"] = 	{["name"] = "dfUseGuild", 	["text"] = "use guild", 	["help"]="", callback=function(val) val = string.format("%i",val) setCommandVar( "dfUseGuild",val) end	,["default"]			=0 		,	["args"]="1"},
-	["dfUseParty"] = 	{["name"] = "dfUseParty", 	["text"] = "use party", 	["help"]="", callback=function(val) val = string.format("%i",val) setCommandVar( "dfUseParty",val) end,	["default"]				=0 		,	["args"]="1"}
+	["triggerLink"] = 	{["name"] = "triggerLink", 	["text"] = "triggerLink", 	["help"]="Set link query trigger. Default=? ", callback=function(val) val = string.format("%s",val) setCommandVar( "triggerLink",val) end,	["default"]="?" 	,	["args"]="1"},
+	["triggerInfo"] =	{["name"] = "triggerInfo", 	["text"] = "triggerInfo", 		["help"]="Nonfunctional", callback=function(val) val = string.format("%s",val) setCommandVar( "triggerInfo" ,val) end	,["default"]="%" 	,	["args"]="1"},
+	["maxLinks"] = 		{["name"] = "maxLinks",		["text"] = "maxLinks", 	["help"]="Max links to display.", callback=function(val) val = string.format("%i",val) setCommandVar( "maxLinks",val) end,	["default"]=6		,  ["args"]="1"},
+	["maxPeek"] = 		{["name"] = "maxPeek"	,	["text"] = "maxPeek", 	["help"]="Max item names to peek ahead.", callback=function(val) val = string.format("%i",val) setCommandVar( "maxPeek",val) end,	["default"]=3			,	["args"]="1"},
+	["enableDictionary"] = 		{["name"] = "enableDictionary",		["text"] = "enableDictionary", 	["help"]="Enable/Disable all queries. ", callback=function(val) val = string.format("%i",val) setCommandVar( "enable",val) end,	["default"]	=1 			,	["args"]="1"},
+	["dfUseWhisper"] = 	{["name"] = "dfUseWhisper", ["text"] = "dfUseWhisper", 	["help"]="Respond to whisper.", callback=function(val) val = string.format("%i",val) setCommandVar( "dfUseWhisper",val) end,	["default"]			=1 	,	["args"]="1"},
+	["dfUseGuild"] = 	{["name"] = "dfUseGuild", 	["text"] = "dfUseGuild", 	["help"]="Respond to guild.", callback=function(val) val = string.format("%i",val) setCommandVar( "dfUseGuild",val) end	,["default"]			=0 		,	["args"]="1"},
+	["dfUseParty"] = 	{["name"] = "dfUseParty", 	["text"] = "dfUseParty", 	["help"]="Respond to party.", callback=function(val) val = string.format("%i",val) setCommandVar( "dfUseParty",val) end,	["default"]				=0 		,	["args"]="1"}
 }
 local function getCommand(name)
 	if DFLootDictionary.Command[name] then
@@ -69,7 +69,7 @@ function displayHelp(name)
 			DFLootDictionary.Util.ChatPrint(v["text"] .. ": " .. v["help"] .. "(" .. DFLootDictionary.Config[v['name']] ..")");
 		end	
 	end
-	DFLootDictionary.Util.ChatPrint("Alpha Release - By Ferren")	
+	DFLootDictionary.Util.ChatPrint("Alpha Release - By Ferren");
 end
 
 DFLootDictionary.LoadDefaults = loadDefaults;

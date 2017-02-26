@@ -7,7 +7,18 @@
 	<Size>
 		<!-- The size of this frame determines what can be clicked for the menu and moving, hence it is the same size as the name frame. -->
 		<AbsDimension x="106" y="25"/>
-	</Size>	
+	</Size>
+	<Backdrop bgFile="Interface\Addons\DFLootDictionary\Images\XPerl_FrameBack" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+		<EdgeSize>
+			<AbsValue val="16"/>
+		</EdgeSize>
+		<TileSize>
+			<AbsValue val="32"/>
+		</TileSize>
+		<BackgroundInsets>
+			<AbsInset left="5" right="5" top="5" bottom="5"/>
+		</BackgroundInsets>
+	</Backdrop>
 	<Layers>
 		<Layer name="OVERLAY">
 			<FontString name="$parent_NameBarText" inherits="GameFontNormal" text="">

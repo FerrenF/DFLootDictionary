@@ -1,14 +1,12 @@
 
-local getFrameIndex		-- Enchantrix.Config.GetFrameIndex()
+local getFrameIndex	
 local chatPrint
 
--- Default filter configuration
 local filterDefaults = {
 		['locale'] = 'default',
 		['printframe'] = 1,
 	}
 
--- True if this filter value should be saved per character
 local perCharacterFilter = {
 		['printframe'] = true,
 	}

@@ -204,16 +204,17 @@ local function lookupItemInfo(text, player)
 --	SendChatMessage(look2,"whisper",nil,player);
 end
 function combatEventT(event, text, player)
-	if not DFLootDictionary.Config.enableDictionary then return end
-	if (event == "WHISPER") and (DFLootDictionary.Config.dfUseWhisper == 0) then return end
-	if (event == "GUILD") and (DFLootDictionary.Config.dfUseGuild == 0) then return end
-	if (event == "PARTY") and (DFLootDictionary.Config.dfUseParty == 0) then return end
-	if (triggerLinkCatch({DFLootDictionary.Config.triggerInfo}, text)==true) then
-	local ky = string.sub(text,string.len(DFLootDictionary.Config.triggerInfo)+1,-1);		
-	local v = lookupItemInfo(ky,player);	
-	elseif (triggerLinkCatch({DFLootDictionary.Config.triggerLink}, text)==true) then
-	local ky = string.sub(text,string.len(DFLootDictionary.Config.triggerLink)+1,-1);		
-	local v = lookupItemLink(ky,player);
+	if DFLootDictionary.Config.enableDictionary == 1 then
+		if (event == "WHISPER") and (DFLootDictionary.Config.dfUseWhisper == 0) then return end
+		if (event == "GUILD") and (DFLootDictionary.Config.dfUseGuild == 0) then return end
+		if (event == "PARTY") and (DFLootDictionary.Config.dfUseParty == 0) then return end
+		if (triggerLinkCatch({DFLootDictionary.Config.triggerInfo}, text)==true) then
+		local ky = string.sub(text,string.len(DFLootDictionary.Config.triggerInfo)+1,-1);		
+		local v = lookupItemInfo(ky,player);	
+		elseif (triggerLinkCatch({DFLootDictionary.Config.triggerLink}, text)==true) then
+		local ky = string.sub(text,string.len(DFLootDictionary.Config.triggerLink)+1,-1);		
+		local v = lookupItemLink(ky,player);
+		end
 	end
 	
 end
